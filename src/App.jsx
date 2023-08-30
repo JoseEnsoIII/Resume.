@@ -8,6 +8,16 @@ const ImageContainer = styled.div`
   justify-content: center;
   background-color: #212016;
   height: 120vh;
+
+  @media (max-width: 600px) {
+    height: 80vh;
+    width: 70vh;
+  }
+
+  @media (max-width: 400px) {
+    height: 70vh;
+    width: 55vh;
+  }
 `;
 
 const GoBackLink = styled.a`
@@ -25,6 +35,42 @@ const GoBackLink = styled.a`
     color: black;
     text-decoration: underline;
   }
+  @media (max-width: 600px) {
+    height: 40px;
+    width:150px;
+    font-size:10px;
+    height: 20px;
+    width:100px;
+    margin-top: 20px;
+    margin-left:20px;
+
+    &:hover {
+      background-color: #ffF;
+      color: black;
+      text-decoration: underline;
+      height: 20px;
+    width:80px;
+    }
+
+    
+  }
+
+  @media (max-width: 400px) {
+    height: 15px;
+    width:20px;
+    font-size:10px;
+    height: 20px;
+    width:100px;
+    margin-top: 5px;
+    margin-left:40px;
+
+    &:hover {
+      background-color: #ffF;
+      color: black;
+      text-decoration: underline;
+      height: 20px;
+    width:80px;
+    }
 `;
 
 const ResumeImage = styled.img`
@@ -33,6 +79,18 @@ const ResumeImage = styled.img`
 
   &.full-size {
     transform: scale(1.5);
+  }
+
+  @media (max-width: 600px) {
+    height: 400px;
+    width:400px;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 400px) {
+    height: 350px;
+    width:250px;
+    margin: -20px
   }
 `;
 
@@ -63,7 +121,7 @@ const FullImageDisplay = ({ imageUrl }) => {
 
   return (
     <ImageContainer>
-        <GoBackLink href="https://personal-portfolio-tau-virid.vercel.app/">
+      <GoBackLink href="https://personal-portfolio-tau-virid.vercel.app/">
         Go Back
       </GoBackLink>
       <ResumeImage
